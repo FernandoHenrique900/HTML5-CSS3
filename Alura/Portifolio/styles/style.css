@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --cor-primaria: #465C88;
-    --cor-secundaria: #FF7A30;
+    --cor-primaria: #796c8d;
+    --cor-secundaria: #d38510;
     --cor-terciaria: #E9E3DF;
-    --cor-hover:#334467;
+    --cor-hover:#62abcf;
 
     --fonte-primaria:'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
@@ -33,7 +33,7 @@ body{
 
 .cabecalho__menu__link{
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
     text-decoration: none;
@@ -52,10 +52,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 5.125rem;;
 }
 
 .apresentacao__conteudo{
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -68,18 +69,18 @@ body{
 }
 
 .apresentacao__conteudo__titulo{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
 
 .apresentacao__conteudo__titulo__destaque{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family:var(--fonte-primaria    );
     color: var(--cor-secundaria);
 }
 
 .apresentacao__conteudo__texto{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
@@ -94,19 +95,19 @@ body{
 .apresentacao__links_subtitulo{
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
-.apresentacao__links__link{
+.apresentacao__links__navegacao{
     /* background-color: #22D4FD; */
     display: flex;
     justify-content: center;
     gap: 20px;
     text-align: center;
-    width: 378px;
+    width: 50%;
     border: 1px solid var(--cor-terciaria);
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
@@ -114,11 +115,15 @@ body{
     font-family: var(--fonte-secundaria);
 }
 
-.apresentacao__links__link:hover{
+.apresentacao__links__navegacao:hover{
  background-color: var(--cor-hover);
- font-size: 26px;
+ font-size: 1.5rem;
  color: aquamarine;
  padding: 3%;
+}
+
+.apresentacao__imagem{
+    width: 50%;
 }
 
 .rodape{
@@ -127,7 +132,26 @@ body{
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
     font-family: var(--fonte-secundaria);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
 
+}
+
+@media (max-width: 1200px ){
+
+    .cabecalho{
+        padding: 10%;/* Ajuste conforme necessário */   
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    } 
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+        /* Outras propriedades, se necessário */
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
 }
